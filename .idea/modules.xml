@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Crawl.iml" filepath="$PROJECT_DIR$/.idea/modules/Crawl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/RetrivePage/Crawl-Crawl.iml" filepath="$PROJECT_DIR$/.idea/modules/RetrivePage/Crawl-Crawl.iml" group="Crawl" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/RetrivePage/Crawl-Crawl_main.iml" filepath="$PROJECT_DIR$/.idea/modules/RetrivePage/Crawl-Crawl_main.iml" group="Crawl" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/RetrivePage/Crawl-Crawl_test.iml" filepath="$PROJECT_DIR$/.idea/modules/RetrivePage/Crawl-Crawl_test.iml" group="Crawl" />
+    </modules>
+  </component>
+</project>

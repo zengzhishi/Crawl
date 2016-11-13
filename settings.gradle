@@ -1,0 +1,4 @@
+rootProject.name = 'Crawl'
+include 'RetrivePage'
+findProject(':RetrivePage')?.name = 'Crawl'
+

@@ -1,0 +1,20 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Gradle : cn.zlion : Crawl-0.0.1.war">
+    <output-path>$PROJECT_DIR$/out/artifacts/Crawl-Crawl</output-path>
+    <properties id="gradle-properties">
+      <options external-project-path="$PROJECT_DIR$" />
+    </properties>
+    <root id="archive" name="Crawl-0.0.1.war">
+      <element id="javaee-facet-resources" facet="Crawl-Crawl_main/web/Web Gradle : Crawl-0.0.1.war" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Crawl-Crawl_main" />
+          <element id="dir-copy" path="$PROJECT_DIR$/RetrivePage/build/resources/main" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/out/artifacts/Crawl-Crawl/exploded/Crawl-0.0.1.war/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>
