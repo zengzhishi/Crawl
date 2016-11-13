@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Scanner;
 
 /**
  * Created by zzs on 2016/11/13.
@@ -22,13 +23,30 @@ public class RetrivePage {
         throws MalformedURLException, IOException{
 
         URL pageURL = new URL(path);
-        BufferedReader reader = new BufferedReader(new InputStreamReader(pageURL.openStream()));
-        String line;
         StringBuilder pageBuffer = new StringBuilder();
-        while ((line = reader.readLine()) != null){
-            pageBuffer.append(line);
+
+        /**
+         * 1. use bufferReader to read page.
+         */
+//        BufferedReader reader = new BufferedReader(new InputStreamReader(pageURL.openStream()));
+//        String line;
+//        while ((line = reader.readLine()) != null){
+//            pageBuffer.append(line);
+//        }
+
+        /**
+         * 2. use scanner to read page.
+         */
+        //ues scanner to read page data encode with utf-8
+        Scanner scanner = new Scanner(new InputStreamReader(pageURL.openStream(), "utf-8"));
+        //正则表达式分段读取
+        scanner.useDelimiter("\\z");
+        while(scanner.hasNext()){
+            pageBuffer.append(scanner.next());
         }
+
         return pageBuffer.toString();
     }
+
 
 }
