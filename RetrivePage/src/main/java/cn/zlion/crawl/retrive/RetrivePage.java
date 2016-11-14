@@ -1,9 +1,8 @@
 package cn.zlion.crawl.retrive;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.net.MalformedURLException;
+import java.net.Socket;
 import java.net.URL;
 import java.util.Scanner;
 
@@ -13,7 +12,7 @@ import java.util.Scanner;
 public class RetrivePage {
 
     /**
-     * 简单传入url并获取页面的内容，最后转化为String类型返回
+     * 简单传入url并获取页面的内容，最后转化为String类型返回, 该方法使用了URL的openstream方法来做
      * @param path 请求的页面url
      * @return 页面的内容，这里是转化为String类型的内容
      * @throws MalformedURLException
@@ -48,5 +47,24 @@ public class RetrivePage {
         return pageBuffer.toString();
     }
 
+    public static void downloadPageBySocket(String host, int port, String file)
+            throws IOException{
+
+        Socket s = new Socket(host, port);
+        OutputStream out = s.getOutputStream();
+        PrintWriter outw = new PrintWriter(out, false);
+        outw.print("GET " + file + " HTTP/1.0\r\n");
+        outw.print("Accept: text/plain, text/html, text/*\r\n");
+        outw.print("\r\n");
+        outw.flush();//song GET command
+
+        InputStream in = s.getInputStream();
+        InputStreamReader inr = new InputStreamReader(in, "utf-8");
+        BufferedReader br = new BufferedReader(inr);
+        String line;
+        while ((line = br.readLine()) != null){
+            System.out.println(line);
+        }
+    }
 
 }
