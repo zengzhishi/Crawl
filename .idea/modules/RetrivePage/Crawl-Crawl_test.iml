@@ -10,7 +10,11 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="Crawl-Crawl_main" />
+    <orderEntry type="library" name="Gradle: commons-httpclient:commons-httpclient:3.1" level="project" />
+    <orderEntry type="library" name="Gradle: com.alibaba:fastjson:1.2.7" level="project" />
     <orderEntry type="library" name="Gradle: junit:junit:4.11" level="project" />
+    <orderEntry type="library" name="Gradle: commons-logging:commons-logging:1.0.4" level="project" />
+    <orderEntry type="library" name="Gradle: commons-codec:commons-codec:1.2" level="project" />
     <orderEntry type="library" name="Gradle: org.hamcrest:hamcrest-core:1.3" level="project" />
   </component>
   <component name="TestModuleProperties" production-module="Crawl-Crawl_main" />

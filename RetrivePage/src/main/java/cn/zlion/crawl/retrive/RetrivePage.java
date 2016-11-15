@@ -1,9 +1,15 @@
 package cn.zlion.crawl.retrive;
 
+import cn.zlion.crawl.retrive.HttpRequestUtil.HttpRequestClientUtil;
+
 import java.io.*;
 import java.net.MalformedURLException;
 import java.net.Socket;
 import java.net.URL;
+import java.net.URLConnection;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 
 /**
@@ -66,5 +72,23 @@ public class RetrivePage {
             System.out.println(line);
         }
     }
+
+    public String getHeaderField(String path)
+            throws IOException
+    {
+        URL url = new URL(path);
+        URLConnection con = url.openConnection();
+        Map<String,List<String>> header = con.getHeaderFields();
+        Iterator i = header.keySet().iterator();
+        String key = null;
+        while(i.hasNext()){
+            key = (String) i.next();
+
+        }
+        return null;
+    }
+
+
+
 
 }

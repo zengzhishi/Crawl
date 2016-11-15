@@ -11,6 +11,12 @@
           <element id="module-output" name="Crawl-Crawl_main" />
           <element id="dir-copy" path="$PROJECT_DIR$/RetrivePage/build/resources/main" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Gradle: commons-httpclient:commons-httpclient:3.1" />
+          <element id="library" level="project" name="Gradle: commons-logging:commons-logging:1.0.4" />
+          <element id="library" level="project" name="Gradle: commons-codec:commons-codec:1.2" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.alibaba/fastjson/1.2.7/a5c721e8ea1e18854272879d6ed2770d25feb342/fastjson-1.2.7.jar" />
+        </element>
       </element>
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/out/artifacts/Crawl-Crawl/exploded/Crawl-0.0.1.war/META-INF/MANIFEST.MF" />
